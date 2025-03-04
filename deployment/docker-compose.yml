@@ -38,6 +38,6 @@ services:
                 condition: service_healthy
         environment:
             REDIS_URI: redis://langgraph-redis:6379
-            DEEP_SEEK_API_KEY: sk-e02cb370989444c090d2bfec7609ed46
-            LANGSMITH_API_KEY: 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
+            DEEP_SEEK_API_KEY: ${DEEP_SEEK_API_KEY}
+            LANGSMITH_API_KEY: ${LANGSMITH_API_KEY}
             POSTGRES_URI: postgres://postgres:postgres@langgraph-postgres:5432/postgres?sslmode=disable
